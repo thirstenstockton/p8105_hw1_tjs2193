@@ -1,21 +1,12 @@
 ---
-title: "Homework 1 R Markdown"
+title: "P8105 Homework 1"
 output: github_document
 ---
 
-I'm an R Markdown document! 
+# Problem 1
 
-# Section 1
+**Download the package containing the penquins dataset:**
 
-Here's a **code chunk** that samples from 
-a _normal distribution_:
+install.packages("palmerpenguins")
 
-```{r}
-samp = rnorm(100)
-length(samp)
-```
 
-# Section 2
-
-I can take the mean of the sample, too!
-The mean is `r mean(samp)`.
