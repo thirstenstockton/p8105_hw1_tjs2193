@@ -15,38 +15,63 @@ data("penguins", package = "palmerpenguins")
 
 ***Code to inspect penguins dataset***
 
-Displays Data Frame
-```{r, eval= FALSE}
+_Displays Data Frame_
+```{r frame, eval= FALSE}
 
 penguins
 
 ```
 
-Provides improtant summary information for our dataset
-```{r, eval= FALSE}
+_Provides improtant summary information for our dataset_
+```{r cool_sum, eval= FALSE}
 
 skimr::skim(penguins)
 
 ```
 
-Gives number of rows in our dataset
-```{r, eval= FALSE}
+_Gives number of rows in our dataset_
+```{r row, eval= FALSE}
 
 nrow(penguins)
 
 ```
 
-Gives number of columns in our dataset
-```{r, eval= FALSE}
+_Gives number of columns in our dataset_
+```{r col, eval= FALSE}
 
 ncol(penguins)
 
 ```
 
-Code for getting mean flipper length
-```{r, eval= FALSE}
+_Code for getting mean flipper length_
+```{r mean_flip, eval= FALSE}
 
 mean(penguins$flipper_length_mm, na.rm = TRUE)
 
 ```
 _The Penguins dataset has 8 columns and 344 rows. Important variables include penguin bill length, bill depth, flipper length, body mass and year. The flipper length of penguins in this datset is 200.9152. Other Important Characteristics: Mean Bill Length: 43.9, Mean Bill Depth: 17.2, Mean Body Mass (g): 4202_
+
+***Creating Scatterplot Using GGplot***
+
+Loading Tidyverse
+
+```{r tidy}
+
+library(tidyverse)
+
+```
+
+Creating Plot
+
+```{r plot, warning= FALSE, }
+
+ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm, color = species)) + geom_point()
+
+```
+
+```{r, echo = FALSE}
+
+ggsave("bill_flipper_hw1_plot.pdf", height = 4, width = 6)
+
+```
+
