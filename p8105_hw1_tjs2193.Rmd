@@ -75,3 +75,26 @@ ggsave("bill_flipper_hw1_plot.pdf", height = 4, width = 6)
 
 ```
 
+# Problem 2
+
+_Creating Dataframe_
+
+```{r tibble}
+
+prb2_df <- tibble(
+  norm_dist <- rnorm(10),
+  gt0 <- norm_dist >= 0,
+  vec_char <- c("evidence", "information", "input", "knowledge",    "picture", "statistics", "notes", "details", "reports",           "score"),
+  vec_factor <-factor(c("Cold", "Hot", "Cold", "Cold", "Hot",       "Cold", "Cold", "Cold", "Cold", "Hot")))
+
+```
+
+_Displaying Dataframe_
+  
+```{r}
+
+  prb2_df
+
+```
+
+  
