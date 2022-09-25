@@ -97,9 +97,54 @@ _Displaying Dataframe_
 
 ```
 
- _Taking Mean of Variables_
+ ***_Taking Means of Variables_***
+ 
+ ```{r}
  
  mean(prb2_df$norm_dist)
+ 
+ ```
+ Taking mean of normal distribution works
+ 
+  ```{r}
+ 
+ mean(prb2_df$gt0)
+ 
+ ```
+ Taking mean of Boolean vector works
+ 
+  ```{r}
+ 
+ mean(prb2_df$vec_char)
+ 
+ ```
+ Taking mean of character vector does not work
+ 
+  ```{r}
+ 
+ mean(prb2_df$vec_factor)
+ 
+ ```
+ Taking mean of factor vector does not work
+ 
+ ***Only numeric and logical variables work***
+ 
+ ***Converting variable types***
+ 
+ _Does Work_
+ ```{r convert}
+ 
+ as.numeric(prb2_df$gt0)
+ 
+ ```
+ 
+ _Does not Work_
+  ```{r}
+ 
+ as.numeric(prb2_df$vec_char)
+ 
+ ```
+When running this code for character/factor variables, you get the above message. Numeric(0) hints that there are no numeric values that can be converted
  
  
 
