@@ -82,10 +82,10 @@ _Creating Dataframe_
 ```{r tibble}
 
 prb2_df <- tibble(
-  norm_dist <- rnorm(10),
-  gt0 <- norm_dist >= 0,
+  norm_dist = rnorm(10),
+  gt0 = norm_dist >= 0,
   vec_char <- c("evidence", "information", "input", "knowledge",    "picture", "statistics", "notes", "details", "reports",           "score"),
-  vec_factor <-factor(c("Cold", "Hot", "Cold", "Cold", "Hot",       "Cold", "Cold", "Cold", "Cold", "Hot")))
+  vec_factor <-factor(c("Warm", "Hot", "Cold", "Cold", "Hot",       "Cold", "Cold", "Warm", "Cold", "Hot")))
 
 ```
 
@@ -97,4 +97,9 @@ _Displaying Dataframe_
 
 ```
 
-  
+ _Taking Mean of Variables_
+ 
+ mean(prb2_df$norm_dist)
+ 
+ 
+
