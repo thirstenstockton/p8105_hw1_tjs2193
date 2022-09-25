@@ -1,12 +1,52 @@
 ---
-title: "P8105 Homework 1"
+title: "P8105 Homework1"
 output: github_document
 ---
 
 # Problem 1
 
-**Download the package containing the penquins dataset:**
+***Dowloading Penguins dataset***
 
-install.packages("palmerpenguins")
+```{r}
 
+data("penguins", package = "palmerpenguins")
 
+```
+
+***Code to inspect penguins dataset***
+
+Displays Data Frame
+```{r, eval= FALSE}
+
+penguins
+
+```
+
+Provides improtant summary information for our dataset
+```{r, eval= FALSE}
+
+skimr::skim(penguins)
+
+```
+
+Gives number of rows in our dataset
+```{r, eval= FALSE}
+
+nrow(penguins)
+
+```
+
+Gives number of columns in our dataset
+```{r, eval= FALSE}
+
+ncol(penguins)
+
+```
+
+Code for getting mean flipper length
+```{r, eval= FALSE}
+
+mean(penguins$flipper_length_mm, na.rm = TRUE)
+
+```
+_The Penguins dataset has 8 columns and 344 rows. Important variables include penguin bill length, bill depth, flipper length, body mass and year. The flipper length of penguins in this datset is 200.9152. Other Important Characteristics: Mean Bill Length: 43.9, Mean Bill Depth: 17.2, Mean Body Mass (g): 4202_
